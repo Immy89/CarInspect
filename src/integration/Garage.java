@@ -1,19 +1,28 @@
 package integration;
 
 /**
- * Created by kim89 on 2017-05-01.
+ * The Garage that the inspection is performed in.
  */
 public class Garage {
-int isGarageOpenOrClosed = 0;
+    boolean isGarageOpen = false;
 
+    /**
+     * Creates a new instance of Garage.
+     */
     public Garage(){
     }
 
+    /**
+     * This method sets isGarageOpen to true to show that the garage is open.
+     */
     public void openGarageDoor(){
-        isGarageOpenOrClosed = 1;
+        isGarageOpen = true;
     }
 
+    /**
+     * This method sets isGarageOpen to false to show that the garage is closed.
+     */
     public void closeGarageDoor(){
-        isGarageOpenOrClosed = 0;
+        isGarageOpen = false;
     }
 }

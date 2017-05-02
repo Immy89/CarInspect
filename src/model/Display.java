@@ -1,19 +1,25 @@
 package model;
 
-/**
- * Created by kim89 on 2017-05-01.
- */
-
 import integration.DisplayManager;
 
+/**
+ * The display that displays the queue number.
+ */
 public class Display {
     DisplayManager displayManager;
-    int presentQueueNo = 1;
+    int currentQueueNo = 1;
 
+    /**
+     * Creates a new instance of the display.
+     * @param displayManager to use when updating the display.
+     */
     public Display(DisplayManager displayManager){
     }
 
+    /**
+     * This method receives help from the displayManager to update the current queue number by 1.
+     */
     public void updateQueueNo(){
-        presentQueueNo = displayManager.updateQueueNo(presentQueueNo);
+        currentQueueNo = displayManager.updateQueueNo(currentQueueNo);
     }
 }
